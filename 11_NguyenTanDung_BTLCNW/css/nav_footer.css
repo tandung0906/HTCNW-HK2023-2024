@@ -1,0 +1,352 @@
+
+:root{
+    --bg1: #30fcda;
+    --bg2: #aff3b5;
+
+}
+/*///////////////////////CSS CỦA PHẦN NAV//////////////////*/ 
+*{
+    box-sizing: border-box;
+}
+ body {
+    max-width: 2000px;
+    min-width: 1400px;
+    margin: 0 auto;
+} 
+.topfirst{
+    background-image: linear-gradient(#30fcda,#aff3b5);
+    align-items: center;
+    display: flex;
+
+}
+div.anhlogo{
+    width: 12%;
+    padding-left: 20px;
+}
+div.anhlogo img{
+   width: 100%;
+}
+
+div.tenthuonghieu{
+    width: 30%;
+}
+div.tenthuonghieu > h1{
+    color:#db1057;
+    font-weight: bold;
+    font:  80px/1.3 'Dancing Script', Helvetica, sans-serif;
+}
+div.thanhtimkiem{
+    width: 35%;
+    font-size: 1.8rem;
+}
+form.menu-search {
+     display: flex;
+}
+.menu-search > span{
+    background-color: white;
+   border: 2px solid #506bff;
+   border-right: none;
+   padding-left: 3px;
+}
+.menu-search > input[type = "submit"]{
+    background-color: #506bff;
+    color: white;
+    font-weight: bold; 
+    border: 2px solid #506bff;
+}
+.menu-search > input[type = "submit"]:hover{
+    background-color:#69e1ff;
+    border: 2px solid #69e1ff;  
+}
+.menu-search > input[type = "text"]{
+   border: 2px solid #506bff;
+   width: 70%;
+   border-left: none ;
+   outline: none;
+}
+div.all-menu-right{
+     width: 31%;
+    display: flex;
+}
+/*định dạng cho phần đăng nhập đăng kí và giỏ hàng*/
+div.all-menu-right a{
+        display: block;
+        padding: 10px 15px;
+        margin-left: 20px;
+        font-size: 20px;
+        border-radius: 20px;
+        background-color: #506bff;
+        color: white;
+        font-weight: bold;
+       
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    div.all-menu-right a:hover{
+        background-color: #69e1ff;
+    }
+    div.menu-right > a > span{
+        text-transform: lowercase;
+    }
+    /*/////////////////////HIỆU ỨNG DROPDOWN/////////////////////////////////*/
+ .phan-gach-chan {
+    position:relative;
+    text-decoration:none;
+    display:inline-block;
+ }
+
+.last > ul > li:after   {
+    display:block;
+    content: '';
+    border-bottom: solid 5px #f1f1f1;  
+    transform: scaleX(0);  
+    transition: transform 300ms ease-in-out;
+    transform-origin:100% 50%;
+ }
+ .last > ul > li:hover::after {
+    transform: scaleX(1);
+    transform-origin:0 50%;
+ }
+/*//////////////////////////////////////////////////////////////////////*/
+.bia > ul{
+  background-color:#506bff;
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.bia{
+   z-index: 30;
+}
+.bia > ul > li > a{
+    text-decoration: none;
+    color:whitesmoke;
+    font-size: 20px;
+    display: block;
+   padding: 30px 35px;
+    font-weight:bold;
+}
+.bia > ul > li > a:hover{
+    color: rgb(0, 204, 255);
+    text-decoration:none;
+   background-color:#aff3b5;
+}
+.bia > ul > li:last-child{
+    margin-left: auto;
+}
+.list > li >a:hover{
+    color: rgb(0, 255, 128);
+    text-decoration:none;
+   background-color:#c446fa;
+}
+
+@keyframes sliceintop{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }to{
+        opacity: 1;
+       transform: translateY(0);
+    }
+}
+.sliceintop{
+    animation: sliceintop .4s forwards;
+}
+@keyframes sliceinbottom {
+    from{
+        transform: translateY(0);
+    }to{
+        opacity: 0;
+        transform: translateY(20px);
+        
+    }
+}
+.sliceinbottom{
+  animation: sliceinbottom .5s forwards;
+}
+.last > ul{
+    position: absolute;
+    background-color: #f4d871;
+   padding: 0;
+   margin: 0;
+   list-style-type: none;
+    z-index: 30;
+   border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.last
+{
+    color:whitesmoke;
+    cursor: pointer;
+}
+.last > ul > li {
+    border-bottom: 1px solid white;
+}
+.last > ul > li > a{
+   text-decoration: none;
+   color: white;
+   display:block;
+   padding-right: 200px;
+   padding-bottom:20px;
+   padding-top: 20px;
+   padding-left: 10px;
+}
+.last > ul > li:last-child{
+   border-bottom:none;
+}
+.last > ul > li > a:hover{
+   background-color:#aff3b5;
+   color: blue;
+}
+/* tạo keyfram  và class cho di chuyển cho thanh menu */
+@keyframes di-xuong-ben-duoi{
+    from{
+        transform: translateY(0);
+        opacity: 0.5;
+    }to{
+        transform: translateY(300px);
+        opacity: 1;
+         background-image:none !important;
+    }
+}
+.add{
+    position: sticky;
+    z-index: 999;
+    top:-300px;
+    animation: di-xuong-ben-duoi 2s forwards;
+}
+
+/*css định dạng của phần FOOTER */
+/*định dạng cho phần footer ở trên */
+.top-footer{
+    display: flex;
+    background-color:#506bff;
+    color: white;
+    padding: 50px;
+}
+.top-footer > div {
+    margin-left: 30px;
+    font-weight: 500;
+    display: flex;
+}
+.top-footer > div > h3{
+    font-size: 20px;
+}
+.fa-truck,.fa-undo,.fa-shopping-bag,.fa-phone-volume{
+    margin-right: 15px;
+    font-size: 40px;
+}
+/*định dạng cho phần footer ở giữa */
+.all-footer{
+    padding-top: 15px;
+    padding-left: 20px;
+    display: flex;
+   
+}
+.all-footer > div{
+   width: 20%;
+   text-align: top;
+   
+}
+.all-footer > div:first-child{
+   width:45%;
+   
+}
+.all-footer > div > h2{
+   font-weight:bold;
+   font-size: 25px;
+}
+.all-footer > div > ul{
+   list-style-type: none;
+   padding: 0;
+   
+}
+.all-footer > div > ul > li{
+  padding-bottom: 20px;
+   font-size: 20px;
+  
+}
+.all-footer > div > ul > li > a{
+   text-decoration: none;
+   color: black;
+}
+.all-footer > div > ul > li > a:hover{
+   color: blue;
+}
+.fab{
+    font-size: 50px;
+}
+/* màu cho bốn logo fb, yt,tw,ig */
+.fa-facebook-square{
+    color: #3e5b98;
+}
+.fa-youtube{
+    color:#ff0000 ;
+}
+.fa-twitter-square{
+    color:#4da7de ;
+}
+.fa-instagram{
+    background-image: linear-gradient(#5257c3,#aa369f,#db3b88,#ed4c4d,#eabd4c);
+    color: white;
+    border-radius: 10px;
+}
+/* định dạng cho phần footer ở dưới */
+.bottom-footer{
+    background-color:#506bff;
+   padding: 15px 20px;
+}
+.bottom-footer > h4{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    opacity: 0.6;
+}
+
+
+
+  /* GO to top */
+ div.gototop > a i{
+    color: black;
+    border: 3px solid black;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 30px;
+     font-weight: 100;
+     width: 50px;
+     height: 50px;
+     border-radius: 50px;
+ }
+ #gototop{
+    right: 20px;
+    bottom: 20px;
+    z-index: 30;
+    position: fixed;
+ }
+ div.gototop > a i:hover{
+     background-color: rgb(155, 155, 155);
+     color: white;
+     border: 1px solid rgb(0, 0, 0);
+     transition: all .5s;
+ }
+  div.gototop > a{
+    text-decoration: none;
+  }
+  /*MESSENGER*/
+  .messenger{
+   position: fixed;
+   right: 10px;
+   top: 300px;
+   z-index: 50;
+  }
+  .fa-facebook-messenger{
+      font-size: 70px;
+      text-shadow: 1.5px 2px lightskyblue;
+  }
+  /* kích hoạt màu nút bấm */
+  div.nut-bam-khuyen-mai > a.kich-hoat-lien-he{
+    background-color: deeppink;
+    color: white;
+}
