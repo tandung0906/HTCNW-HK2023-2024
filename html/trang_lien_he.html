@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Liên hệ</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="images2/logothuonghieu.png" rel="shortcut icon" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Dancing+Script" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="../css/nav_footer.css">
+    <link rel="stylesheet" href="../css/trang_lien_he.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/trang_lien_he.js"></script>
+    <script src="../js/trang_chu.js"></script>
+</head>
+
+<body onload="init()">
+    <!------------------ĐÂY LÀ LOGO MESSENGER------------>
+    <div class="messenger">
+        <a href=""><i class="fab fa-facebook-messenger"></i></a>
+    </div>
+    <!--------------ĐÂY LÀ NÚT goToTop--------------->
+    <div class="gototop" id="gototop">
+        <a href="javascript:;"><i class="fa fa-angle-up angle-icon"></i></a>
+    </div>
+    <!----------------Phần NAV------------------>
+    <nav>
+        <div class="allnav" id="allnav">
+            <div class="topfirst">
+                <div class="anhlogo">
+                    <a href="../html/index.html"><img src="../img-logo/logo.png" alt="ảnh"></a>
+                </div>
+
+                <div class="tenthuonghieu">
+                    <h1>Dũng Store</h1>
+                </div>
+                <div class="thanhtimkiem">
+                    <form class="menu-search">
+                        <span><i class="fas fa-search"></i></span>
+                        <input type="text" name="query" value autocomplete="off" placeholder="Tìm kiếm ở đây....">
+                        <input type="submit" value="Tìm kiếm"></input>
+                    </form>
+                </div>
+                <div class="all-menu-right">
+                    <div>
+                        <a class="dang-nhap" href="#" target="" id="btn-login">đăng nhập / đăng ký</a>
+                    </div>
+                    <div>
+                        <a href="" target="_self">giỏ hàng / 0 <span> đ </span><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bia" id="bia">
+                <ul>
+                    <li><a href="../html/index.html" target="_self"><i class="fas fa-home"></i> Trang Chủ</a></li>
+                    <li><a href="../html/trang_gioi_thieu.html" target="_self">Giới Thiệu</i></a></li>
+                    <li class="last">
+                        <a href="#" target="_self">Sản phẩm<i class="fas fa-caret-down"></i></a>
+                        <ul class="list suplast">
+                            <li><a href="trang_sanPham.html" target="_self"><i class="fas fa-circle"></i>Điện thoại</a></li>
+                            <li><a href="#"><i class="fas fa-circle"></i>Phụ kiện</a></li>
+                            <li><a href="#"><i class="fas fa-circle"></i>Âm thanh </a></li>
+                            <li><a href="#"><i class="fas fa-circle"></i>Sữa chữa</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../html/trang_khuyen_mai.html" target="_self">Khuyến Mãi</a></li>
+                    <li><a href="../html/trang_lien_he.html" target="_self">Liên Hệ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-------------------------phần SECTION------------------------------>
+    <header>
+        <div class="background-contact">
+            <div class="text-contact">
+                <h1> Liên Hệ </h1>
+                <p>Mọi ý kiến đóng góp của bạn sẽ giúp ích cho sự phát triển của chúng tôi<i></i></p>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="title-lien-he-center">
+            <h3 class="content-lien-he-center">
+                <b></b>
+                <span class="content-lien-he"> LIÊN HỆ VỚI CHÚNG TÔI</span>
+                <b></b>
+            </h3>
+        </div>
+        <form action method="POST" class="all-form-lien-he" id="form-1">
+            <div class="form-lien-he">
+                <h3>Họ và Tên*</h3>
+                <input type="text" id="fullname" class="text hieu-ung" placeholder="Họ và tên của bạn..." />
+                <span class="form-message"></span>
+            </div>
+            <div class="form-lien-he">
+                <h3>Địa chỉ Email*</h3>
+                <input type="email" id="email" class="text hieu-ung" placeholder="Ví dụ:abc123@gmail.com">
+                <span class="form-message"></span>
+            </div>
+
+            <div class="form-lien-he">
+                <h3>Chủ đề</h3>
+                <input class="text hieu-ung" id="chu-de" placeholder="Viết tại đây..." />
+                <span class="form-message"></span>
+            </div>
+
+            <div class="form-lien-he">
+                <h3>Lời nhắn của bạn</h3>
+                <textarea class="hieu-ung" id="noi-dung" cols="75" rows="5" placeholder="Nội dung"></textarea>
+                <span class="form-message"></span>
+            </div>
+            <p class="submit">
+                <button type='submit' class="button-lien-he">Gửi</button>
+            </p>
+        </form>
+    </section>
+    <!-----------------------phần FOOTER----------------------->
+    <footer>
+        <div class="foots">
+            <div class="top-footer">
+                <div>
+                    <i class="fas fa-truck"></i>
+                    <h3>MIỄN PHÍ VẬN CHUYỂN
+                        Cho Đơn Đặt Hàng Trên 500.000 Đ</h3>
+                </div>
+                <div>
+                    <i class="fas fa-undo"></i>
+                    <h3> HOÀN 100% TIỀN MUA HÀNG
+                        Trong vòng 12 giờ sau khi nhận</h3>
+                </div>
+                <div>
+                    <i class="fas fa-shopping-bag"></i>
+                    <h3>GIAO HÀNG NHANH CHÓNG
+                        Sau 2h kể từ khi xác nhận</h3>
+                </div>
+                <div>
+                    <i class="fas fa-phone-volume"></i>
+                    <h3> Hotline - Hỗ trợ trực tuyến:
+                        0123456456 - 0909999999</h3>
+                </div>
+            </div>
+            <div class="all-footer">
+                <div class="foot">
+                    <h2>Liên hệ</h2>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i>Địa chỉ : Số 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp,
+                            Thành phố Hồ Chí Minh</li>
+                        <li><i class="fas fa-phone"></i> Điện thoại:<a href="tel:0123456456" target="_blank">
+                                0123456456</a></li>
+                        <li><i class="fas fa-envelope"></i> Gmail:<a href="mailto:nguyentandung0906@gmail.com"
+                                target="_blank">nguyentandung0906@gmail.com</a> </li>
+                    </ul>
+                </div>
+                <div class="foot">
+                    <h2>Danh mục</h2>
+                    <ul>
+                        <li><a href="*" target="_blank">Điện thoại</a></li>
+                        <li><a href="*" target="_blank">Phụ kiện</a></li>
+                        <li><a href="*" target="_blank">Âm thanh</a></li>
+                        <li><a href="*" target="_blank">Sửa chữa</a></li>
+                    </ul>
+                </div>
+                <div class="foot">
+                    <h2>Mục lục</h2>
+                    <ul>
+                        <li><a href="*" target="_blank">Trang chủ</a></li>
+                        <li><a href="*" target="_blank">Giới thiệu</a></li>
+                        <li><a href="*" target="_blank">Sản phẩm</a></li>
+                        <li><a href="*" target="_blank">Khuyến mãi</a></li>
+                        <li><a href="*" target="_blank">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="foot">
+                    <h2>Liên kết</h2>
+                    <ul>
+                        <li><a href="*" target="_blank">Tài khoản</a></li>
+                        <li><a href="*" target="_blank">Địa chỉ ngân hàng</a></li>
+                        <li><a href="*" target="_blank">Theo dõi</a></li>
+                        <li><a href="*" target="_blank">Hướng dẫn</a></li>
+                        <li><a href="*" target="_blank">Liên hệ</a></li>
+                    </ul>
+                    <div class="foot">
+                        <span class="facebook"><a href="https:www.facebook.com" target="_blank"><i
+                                    class="fab fa-facebook-square"></i></a></span>
+                        <span class="youtube"><a href="https:www.youtube.com" target="_blank"><i
+                                    class="fab fa-youtube"></a></i></span>
+                        <span class="twitter"><a href="https:www.twitter.com" target="_blank"><i
+                                    class="fab fa-twitter-square"></a></i></span>
+                        <span class="instagram"><a href="https:www.instagram.com" target="_blank"><i
+                                    class="fab fa-instagram"></a></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bottom-footer">
+            <h4>&copy; Come with me.</h4>
+        </div>
+    </footer>
+    <!-- form đăng nhập -->
+    <div class="modal fade" role="dialog" id="myModal">
+        <div class="modal-dialog" style="margin-top: 10px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="text-heading">ĐĂNG NHẬP</h2>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="form-horizontal" role="form" style="margin-top: 10px">
+                        <div class="form-group">
+                            <div id="thongbao" class="text-danger" style="text-align: center;"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtName" class="control-label col-xs-">Tên đăng nhập</label>
+                            <div class="col-xs-9">
+                                <input type="text" class="form-control" id="txtName" placeholder="User name">
+                                <span class="text-danger" id="tbName" style="color:red">*</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtPass" class="control-label col-xs-3">Mật khẩu</label>
+                            <div class="col-xs-9" style="margin-bottom: 10px;">
+                                <input type="password" class="form-control" id="txtPass" placeholder="Password">
+                                <span class="text-danger" style="color:red" id="tbPass">*</span>
+                            </div>
+                        </div>
+                        <span class="spanDK">Bạn chưa có tài khoản? Đăng ký <a href="../html/signin.html">tại
+                                đây!</a></span>
+                </div>
+                <button class="btnDangNhap" id="btnDangNhap" type="button">Đăng Nhập</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
